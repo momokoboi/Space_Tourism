@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- css -->
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="destination.css">
+  <!-- javascript -->
+   <script src="script.js"></script>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body id="destination">
+  <header>
+    <img src="assets/shared/logo.svg" alt="logo">
+  <hr>
+      <nav>
+        <ul>
+          <li><a href="index.html" target="_self" rel="home" class="p"><strong>00</strong> Home</a></li>
+          <li><a href="destination-moon.html" target="_self" rel="self" class="selected"><strong>01 </strong>Destination</a></li>
+          <li><a href="crew-commander.html" target="_self" rel="next"><strong>02</strong> Crew</a></li>
+          <li><a href="#" ><strong>03</strong> Technology</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <section class="imagem">
+      <h1><strong>01</strong> Pick your destination</h1>
+      <img src="assets/destination/image-moon.png" alt="moon_img" id="imageElement">
+    </section>
+    <article>
+        <menu>
+          <ul>
+            <li><button class="selected" id="Moon">Moon</button></li>
+            <li><button id="Mars">Mars</button></li>
+            <li><button id="Europa">Europa</button></li>
+            <li><button id="Titan">Titan</button></li>
+          </ul>
+        </menu>
+        <h1 id="planet_Element">Moon</h1>
+        <p id="description_Element">
+          See our planet as you've never seen it before. A perfect relaxing trip away to help
+          regain perspective and come back refreshed. While you're there, take in some history
+          by visiting the Luna 2 and Apollo 11 landing sites.
+        </p>
+        <hr class="article_hr">
+        <div class="infos">
+          <div class="distance">
+            <h3>Avg. distance</h3>
+            <p>384,400 km</p>
+          </div>
+          <div class="travel_time">
+            <h3>Est. travel time</h3>
+            <p>3 days</p>
+          </div>
+        </div>
+    </article>
+  </main>
+</body>
+</html>
