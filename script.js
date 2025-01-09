@@ -174,6 +174,8 @@ async function main_Crew(){
     let selector3 = document.getElementById("victor")
     let selector4 = document.getElementById("anousheh")
 
+    // wrapper_img
+    let img_wrapper = document.getElementsByClassName("wrapper_img")[0]
 
     selector1.addEventListener("change", () =>  {
         if (selector1.checked){
@@ -184,6 +186,8 @@ async function main_Crew(){
             imgEL.setAttribute("alt", "douglas_img")
             imgEL.style.margin = "7px 60px"
             imgEL.style.width = "420px"
+            img_wrapper.setAttribute("class", "wrapper_img")
+            
     }
     })
     
@@ -194,11 +198,12 @@ async function main_Crew(){
             descriptionEL.innerText = `${data.crew[1].bio}`
             imgEL.setAttribute("src", `${data.crew[1].images.png}`)
             imgEL.setAttribute("alt", "mark_img")
-            imgEL.style.margin = "58px 60px"
-            imgEL.style.width = "350px"
+            imgEL.style.margin = "105px 60px"
+            imgEL.style.width = "420px"
+            img_wrapper.setAttribute("class", "after_wrapper_img")
         }
     })
-   
+    
     selector3.addEventListener("change", ()=>{
         if(selector3.checked){
             typeEL.innerText = `${data.crew[2].role}`
@@ -208,6 +213,7 @@ async function main_Crew(){
             imgEL.setAttribute("alt", "victor_img")
             imgEL.style.margin = "86px 60px"
             imgEL.style.width = "420px"
+            img_wrapper.setAttribute("class", "wrapper_img")
         }
     })
 
@@ -220,6 +226,7 @@ async function main_Crew(){
             imgEL.setAttribute("alt", "anousheh_img")
             imgEL.style.margin = "140px 60px"
             imgEL.style.width = "420px"
+            img_wrapper.setAttribute("class", "wrapper_img")
         }
     })
 

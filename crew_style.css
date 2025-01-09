@@ -23,6 +23,7 @@ body{
     background-image: url(assets/crew/background-crew-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 main{
@@ -161,5 +162,17 @@ input[type="radio"]:checked + .label_btn::before{
     width: 100%;
     height: 10%;
     background: linear-gradient(to bottom, transparent 5%, var(--blue900));
-    pointer-events: none; /* Ensure overlay doesn't block interactions */
+    pointer-events: none; 
+}
+
+
+.after_wrapper_img::after{
+        content: "";
+        position: absolute;
+        top: 90.3%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background: linear-gradient(to bottom, transparent 5%, var(--blue900));
+        pointer-events: none; 
 }
