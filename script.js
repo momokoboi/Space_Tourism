@@ -1,4 +1,16 @@
 
+// load respective js modules after DOM loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const pageID = document.body.id
+
+    if (pageID === "destination"){
+        main_Destination()
+    }else if(pageID === "crew"){
+        UpdateSelector_Crew()
+    }else{
+        alert("ERROR")
+    }
+})
 
 
 // fetch Data for all
@@ -142,9 +154,41 @@ async function main_Destination() {
 }
 // DESTINATION END -----------------------------------------------
 
-main_Destination()
-
 // CREW ---------------------------------------------------------
+
+function UpdateSelector_Crew(){
+    let selector1 = document.getElementById("douglas")
+    let selector2 = document.getElementById("mark")
+    let selector3 = document.getElementById("victor")
+    let selector4 = document.getElementById("anousheh")
+
+    selector1.addEventListener("change", () =>  {
+        if (selector1.checked){
+            alert("CHEKED DOULAS")
+    }
+    })
+    
+    selector2.addEventListener("change", () => {
+        if(selector2.checked){
+            alert("CHEKED MARK")
+        }
+    })
+   
+    selector3.addEventListener("change", ()=>{
+        if(selector3.checked){
+            alert("CHEKED filip")
+        }
+    })
+
+    selector4.addEventListener("change", ()=>{
+        if(selector4.checked){
+            alert("CHEKED aa")
+        }
+    })
+
+
+}
+
 
 
 
