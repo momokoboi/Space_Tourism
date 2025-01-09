@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pageID === "destination"){
         main_Destination()
     }else if(pageID === "crew"){
-        UpdateSelector_Crew()
+        main_Crew()
     }else{
         alert("ERROR")
     }
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // fetch Data for all
 async function getdata(){
+    // /Space_Tourism (for github)
     return await fetch("/Space_Tourism/data.json")
     .then(res => res.json())
     .catch(error => console.log(error))
@@ -156,33 +157,69 @@ async function main_Destination() {
 
 // CREW ---------------------------------------------------------
 
-function UpdateSelector_Crew(){
+async function main_Crew(){
+    let data = await getdata()
+    console.log("inside crewmain: ", data)
+
+    // TO BE CHANGED ELEMENTS
+
+    let typeEL = document.getElementById("typeEL")
+    let nameEL = document.getElementById("nameEL")
+    let descriptionEL = document.getElementById("descriptionEL")
+    let imgEL = document.getElementById("img_EL")
+
+    // Radio elements
     let selector1 = document.getElementById("douglas")
     let selector2 = document.getElementById("mark")
     let selector3 = document.getElementById("victor")
     let selector4 = document.getElementById("anousheh")
 
+
     selector1.addEventListener("change", () =>  {
         if (selector1.checked){
-            alert("CHEKED DOULAS")
+            typeEL.innerText = `${data.crew[0].role}`
+            nameEL.innerText = `${data.crew[0].name}`
+            descriptionEL.innerText = `${data.crew[0].bio}`
+            imgEL.setAttribute("src", `${data.crew[0].images.png}`)
+            imgEL.setAttribute("alt", "douglas_img")
+            imgEL.style.margin = "7px 60px"
+            imgEL.style.width = "420px"
     }
     })
     
     selector2.addEventListener("change", () => {
         if(selector2.checked){
-            alert("CHEKED MARK")
+            typeEL.innerText = `${data.crew[1].role}`
+            nameEL.innerText = `${data.crew[1].name}`
+            descriptionEL.innerText = `${data.crew[1].bio}`
+            imgEL.setAttribute("src", `${data.crew[1].images.png}`)
+            imgEL.setAttribute("alt", "mark_img")
+            imgEL.style.margin = "58px 60px"
+            imgEL.style.width = "350px"
         }
     })
    
     selector3.addEventListener("change", ()=>{
         if(selector3.checked){
-            alert("CHEKED filip")
+            typeEL.innerText = `${data.crew[2].role}`
+            nameEL.innerText = `${data.crew[2].name}`
+            descriptionEL.innerText = `${data.crew[2].bio}`
+            imgEL.setAttribute("src", `${data.crew[2].images.png}`)
+            imgEL.setAttribute("alt", "victor_img")
+            imgEL.style.margin = "86px 60px"
+            imgEL.style.width = "420px"
         }
     })
 
     selector4.addEventListener("change", ()=>{
         if(selector4.checked){
-            alert("CHEKED aa")
+            typeEL.innerText = `${data.crew[3].role}`
+            nameEL.innerText = `${data.crew[3].name}`
+            descriptionEL.innerText = `${data.crew[3].bio}`
+            imgEL.setAttribute("src", `${data.crew[3].images.png}`)
+            imgEL.setAttribute("alt", "anousheh_img")
+            imgEL.style.margin = "140px 60px"
+            imgEL.style.width = "420px"
         }
     })
 
