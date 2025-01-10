@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         main_Destination()
     }else if(pageID === "crew"){
         main_Crew()
+    }else if(pageID === "technology"){
+        main_Technology()
     }else{
         alert("ERROR")
     }
@@ -19,6 +21,7 @@ async function getdata(){
     return await fetch("/Space_Tourism/data.json")
     .then(res => res.json())
     .catch(error => console.log(error))
+    
 }
 
 
@@ -117,7 +120,7 @@ function UpdateSelector(planet){
 
 
 async function main_Destination() {
-    data = await getdata()
+    const data = await getdata()
     console.log("Inside main:", data)
 
     // Button Element Selectors
@@ -158,7 +161,7 @@ async function main_Destination() {
 // CREW ---------------------------------------------------------
 
 async function main_Crew(){
-    let data = await getdata()
+    const data = await getdata()
     console.log("inside crewmain: ", data)
 
     // TO BE CHANGED ELEMENTS
@@ -234,7 +237,52 @@ async function main_Crew(){
 }
 
 
+async function main_Technology() {
 
+    // data fetch
+
+    const data = await getdata()
+    console.log("inside technology main: ", data)
+    // Selectors Elements
+    
+    let title_EL = document.getElementById("Title")
+    let description_EL = document.getElementById("Description")
+
+    let img_EL = document.getElementById("img_EL")
+
+    // Selectors radio
+
+    let radio1 = document.getElementById("1")
+    let radio2 = document.getElementById("2")
+    let radio3 = document.getElementById("3")
+
+    // radio listeners
+
+    radio1.addEventListener("change", () => {
+        if(radio1.checked){
+            title_EL.innerText = `${data.technology[0].name}`
+            description_EL.innerText = `${data.technology[0].description}`
+            img_EL.setAttribute("src", `${data.technology[0].images.portrait}`)
+        }
+    })
+
+    radio2.addEventListener("change", () => {
+        if(radio2.checked){
+            title_EL.innerText = `${data.technology[1].name}`
+            description_EL.innerText = `${data.technology[1].description}`
+            img_EL.setAttribute("src", `${data.technology[1].images.portrait}`)
+        }
+    })
+
+    radio3.addEventListener("change", () => {
+        if(radio3.checked){
+            title_EL.innerText = `${data.technology[2].name}`
+            description_EL.innerText = `${data.technology[2].description}`
+            img_EL.setAttribute("src", `${data.technology[2].images.portrait}`)
+        }
+    })
+
+}
 
 
 

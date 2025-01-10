@@ -27,6 +27,7 @@ body{
 
 main{
     
+
     color: white;
     height: calc(100vh - 136px);
     display: flex;
