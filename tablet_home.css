@@ -1,0 +1,22 @@
+
+body{
+    background-image: url(assets/home/background-home-tablet.jpg);
+    background-size: cover;
+}
+
+hr{
+    display: none;
+}
+
+main{
+    /* background-color: red; */
+    flex-flow: column nowrap;
+}
+
+main a{
+    width: 200px;
+}
+
+main a::before{
+    width: calc(200*1.3px);
+}

@@ -69,7 +69,8 @@ nav a{
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 0.9rem;
+    font-size: 14px;
+    line-height: 16.8%; 
     align-content: center;
     height: calc(100%);
 
@@ -105,4 +106,8 @@ nav a:not(.selected):hover::before{
     transform: translate(-50%, -50%);
 }
 
+/* disable hamburger */
 
+input[type="checkbox"]{
+    display: none;
+}

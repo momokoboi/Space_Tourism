@@ -1,0 +1,139 @@
+
+body, html{
+    position: relative;
+    overflow: hidden;
+}
+/* all */
+header nav{
+    height: 100vh;
+    position: absolute;
+    width: fit-content;
+
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* display: none; */
+  
+}
+
+header > nav > ul{
+    margin-top: 130px;
+    flex-flow: column nowrap;
+    width: 40vw;
+    justify-content: flex-start;
+    flex: none;
+    height: fit-content;
+    gap: 32px;
+    position: relative;
+}
+
+nav a{
+    height: fit-content;
+    font-size: clamp(12px, 2vw, 16px);
+    font-family: var(--Barlow_condensed);
+    line-height: 19.2%;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+nav a:not(.selected):hover::before{
+    content: "";
+    width: 6px;
+    background-color: rgba(255, 255, 255, 0.405);
+
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+    transform: translate(-50%, -50%);
+}
+
+
+
+.selected::before{
+    content: "";
+    width: 6px;
+    background-color: white;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+
+    position: absolute;
+}
+
+nav li{
+    margin-left: 15px;
+    width: 100%;
+    height: fit-content;
+}
+
+/* hamburger menu */
+#label_open_close::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    top: 80px;
+    right: 15px;
+    background-image: url(assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+/* hamburger responsiveness */
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + #label_open_close::before{
+    background-image: url(assets/shared/icon-hamburger.svg);
+}
+input[type="checkbox"]:checked ~ ul{
+    display: none;
+}
+
+/* main */
+main{
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+main h2{
+    font-size: 3.6vw;
+ 
+}
+main h1{
+    font-size: 16vw;
+    
+}
+main p{
+    width: 38ch;
+    text-align: center;
+    font-size: clamp(15px, 2.5vw, 18px);
+    white-space: normal;
+    word-wrap: break-word;
+
+    margin-bottom: 15px;
+    
+}
+
+article{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main a{
+    width: 144px;
+}
+
+main a::before{
+    width: calc(144px*1.3);
+}
+
