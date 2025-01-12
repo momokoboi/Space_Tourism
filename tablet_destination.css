@@ -1,0 +1,84 @@
+body,html{
+    overflow: auto;
+}
+/* remove hr */
+header > hr{
+    display: none;
+}
+
+main{
+    margin-top: 150px;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* article responsiveness */
+article{
+    text-align: center;
+    align-content: center;
+
+    width: 650px;
+}
+
+article ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article h1{
+    font-size: clamp(80px, 10vw, 100px);
+    
+}
+
+article > p{
+    font-size: 18px;
+    width: 56ch;
+}
+
+/* infos responsiveness */
+
+.infos{
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+    padding: 40px;
+}
+
+.infos h3{
+    font-size: clamp(8px, 2vw, 16px);
+}
+
+.infos p{
+    font-size: clamp(15px, 2.99vw, 28px);
+}
+
+/* image section responsiveness */
+.imagem{
+    width: clamp(300px, 39.7vw, 539px);
+    margin-left: 50px;
+}
+
+.imagem h1{
+    font-size: clamp(15px, 3vw, 28px);
+    position: relative;
+    left: -250px;
+    top: -20px;
+
+}
+
+.imagem img{
+    width: clamp(350px, 35vw, 420px);
+}
+
+/* infos*/
+
+.article_hr{
+    position: static;
+    height: 1px;
+    width: 100%;
+    flex: none;
+    margin: 10px;
+
+}

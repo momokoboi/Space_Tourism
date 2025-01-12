@@ -3,6 +3,11 @@ body, html{
     position: relative;
     overflow: hidden;
 }
+
+body{
+    background-image: url(assets/home/background-home-mobile.jpg);
+}
+
 /* all */
 header nav{
     height: 100vh;
@@ -76,7 +81,7 @@ nav li{
     height: 30px;
     width: 30px;
     top: 80px;
-    right: 15px;
+    right: 50px;
     background-image: url(assets/shared/icon-close.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,6 +97,7 @@ input[type="checkbox"]{
 
 input[type="checkbox"]:checked + #label_open_close::before{
     background-image: url(assets/shared/icon-hamburger.svg);
+
 }
 input[type="checkbox"]:checked ~ ul{
     display: none;
