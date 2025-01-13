@@ -1,5 +1,6 @@
 body,html{
     overflow: auto;
+    overflow-x: hidden;
 }
 /* remove hr */
 header > hr{

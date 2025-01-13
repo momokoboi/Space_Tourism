@@ -1,0 +1,167 @@
+/* all */
+header nav{
+    height: 100vh;
+    position: absolute;
+    width: fit-content;
+
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* display: none; */
+  
+}
+
+header > nav > ul{
+    margin-top: 130px;
+    flex-flow: column nowrap;
+    width: 40vw;
+    justify-content: flex-start;
+    flex: none;
+    height: fit-content;
+    gap: 32px;
+    position: relative;
+}
+
+nav a{
+    height: fit-content;
+    font-size: clamp(12px, 2vw, 16px);
+    font-family: var(--Barlow_condensed);
+    line-height: 19.2%;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+nav a:not(.nav_selected):hover::before{
+    content: "";
+    width: 6px;
+    background-color: rgba(255, 255, 255, 0.405);
+
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+    transform: translate(-50%, -50%);
+}
+
+
+
+.nav_selected::before{
+    content: "";
+    width: 6px;
+    background-color: white;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+
+    position: absolute;
+}
+
+nav li{
+    margin-left: 15px;
+    width: 100%;
+    height: fit-content;
+}
+
+/* hamburger menu */
+#label_open_close::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    top: 80px;
+    right: 50px;
+    background-image: url(assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+/* hamburger responsiveness */
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + #label_open_close::before{
+    background-image: url(assets/shared/icon-hamburger.svg);
+
+}
+input[type="checkbox"]:checked ~ ul{
+    display: none;
+}
+
+/* all */
+
+header hr{
+    display: none;
+}
+
+body,html{
+    overflow: auto;
+    overflow-x: hidden;
+
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    margin-top: 150px;
+}
+
+.imagem h1{
+    font-size: clamp(20px, 3vw, 32px);
+    /* calc missing width */
+    margin-left: calc((852px - 100vw) * 0.25);
+}
+
+.imagem img{
+    width: clamp(300px, 45vw, 600px);
+}
+
+article{
+    align-items: center;
+}
+article h1{
+    font-size: clamp(68px, 10vw, 100px);
+    
+}
+article p{
+    font-size: clamp(13px, 2.8vw, 18px);
+    width: 36ch;
+}
+
+.article_hr{
+    width: 80vw;
+    margin: 5px 0px;
+}
+
+/* infos */
+
+.infos{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 40px;
+}
+
+.infos h3{
+    font-size: clamp(8px, 2vw, 16px);
+}
+
+.infos p{
+    font-size: clamp(15px, 2.99vw, 28px);
+}
+
+.distance{
+    width: 20%;
+}
+
+.travel_time{
+    width: 20%;
+}

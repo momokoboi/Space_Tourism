@@ -21,7 +21,7 @@ header > img{
 hr{
     flex: 1 1 200px;
     position: absolute;
-    left: 176px;
+    left: 275px;
     top: calc(50% + 23.5px);
     z-index: 1;
 
@@ -83,7 +83,7 @@ nav a{
 }
 
 
-nav a:not(.selected):hover::before{
+nav a:not(.selected, .nav_selected):hover::before{
     content: "";
     width: 80%;
     background-color: rgba(255, 255, 255, 0.405);
