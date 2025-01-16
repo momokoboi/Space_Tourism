@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
-
 // fetch Data for all
 async function getdata(){
     // /Space_Tourism (for github)
@@ -188,7 +187,18 @@ async function main_Crew(){
             imgEL.setAttribute("src", `${data.crew[0].images.png}`)
             imgEL.setAttribute("alt", "douglas_img")
             imgEL.style.margin = "7px 60px"
+            const viewportWidth = window.innerWidth;
+            // tablet
+            if(viewportWidth < 1300 & viewportWidth > 850){
+                imgEL.style.marginBottom = "20px"
+            }
             imgEL.style.width = "420px"
+            // mobile
+            if(viewportWidth < 850){
+                imgEL.style.marginBottom = "16px"
+                imgEL.style.display = "block"
+                imgEL.style.width = "300px"
+            }
             img_wrapper.setAttribute("class", "wrapper_img")
             
     }
@@ -202,7 +212,22 @@ async function main_Crew(){
             imgEL.setAttribute("src", `${data.crew[1].images.png}`)
             imgEL.setAttribute("alt", "mark_img")
             imgEL.style.margin = "105px 60px"
+            const viewportWidth = window.innerWidth;
+            console.log(viewportWidth)
+            // tablet
+            if(viewportWidth < 1300 & viewportWidth > 850){
+                main_EL = document.getElementById("main_EL")
+                main_EL.style.marginTop = "250px"
+            }
             imgEL.style.width = "420px"
+            // mobile
+            if(viewportWidth < 850){
+                imgEL.style.marginBottom = "0px"
+                imgEL.style.display = "block"
+                imgEL.style.width = "300px"
+                main_EL = document.getElementById("main_EL")
+                main_EL.style.marginTop = "320px"
+            }
             img_wrapper.setAttribute("class", "after_wrapper_img")
         }
     })
@@ -215,7 +240,22 @@ async function main_Crew(){
             imgEL.setAttribute("src", `${data.crew[2].images.png}`)
             imgEL.setAttribute("alt", "victor_img")
             imgEL.style.margin = "86px 60px"
+            const viewportWidth = window.innerWidth;
+            // tablet
+            if(viewportWidth < 1300 & viewportWidth > 850){
+                imgEL.style.marginTop = "150px"
+                main_EL = document.getElementById("main_EL")
+                main_EL.style.marginTop = "250px"
+            }
             imgEL.style.width = "420px"
+            // mobile
+            if(viewportWidth < 850){
+                imgEL.style.marginBottom = "17px"
+                imgEL.style.display = "block"
+                imgEL.style.width = "300px"
+                main_EL = document.getElementById("main_EL")
+                main_EL.style.marginTop = "320px"
+            }
             img_wrapper.setAttribute("class", "wrapper_img")
         }
     })
@@ -228,7 +268,20 @@ async function main_Crew(){
             imgEL.setAttribute("src", `${data.crew[3].images.png}`)
             imgEL.setAttribute("alt", "anousheh_img")
             imgEL.style.margin = "140px 60px"
+            const viewportWidth = window.innerWidth;
+            // tablet
+            if(viewportWidth < 1300 & viewportWidth > 850){
+                imgEL.style.marginBottom = "20px"
+            }
             imgEL.style.width = "420px"
+            // mobile
+            if(viewportWidth < 850){
+                imgEL.style.marginBottom = "19px"
+                imgEL.style.display = "block"
+                imgEL.style.width = "300px"
+                main_EL = document.getElementById("main_EL")
+                main_EL.style.marginTop = "320px"
+            }
             img_wrapper.setAttribute("class", "wrapper_img")
         }
     })

@@ -7,6 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="all.css">
   <link rel="stylesheet" href="crew_style.css">
+  <!-- media queries -->
+  <link rel="stylesheet" href="tablet_crew.css" 
+  media="screen and (max-width: 1455px)">
+  <link rel="stylesheet" href="mobile_crew.css" media="screen and (max-width: 855px)">
+  <!-- scripts -->
   <script src="script.js" defer></script>
   
   <title>Frontend Mentor | Space tourism website</title>
@@ -16,6 +21,8 @@
     <img src="assets/shared/logo.svg" alt="logo">
   <hr>
       <nav>
+        <input type="checkbox" name="nav_open_close" id="i_nav_open_close" checked>
+        <label for="i_nav_open_close" id="label_open_close"></label>
         <ul>
           <li><a href="index.html" target="_self" rel="home" class="p"><strong>00</strong> Home</a></li>
           <li><a href="destination-moon.html" target="_self" rel="self" ><strong>01 </strong>Destination</a></li>
@@ -24,7 +31,7 @@
         </ul>
       </nav>
   </header>
-  <main>
+  <main id="main_EL">
     
       <article>
         <h1><strong>02</strong> Meet your crew</h1>

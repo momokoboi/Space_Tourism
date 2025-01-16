@@ -1,0 +1,42 @@
+body,html{
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+hr{
+    display: none;
+}
+
+ main{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 200px;
+    /* Replaces margin-top */
+    min-height: calc(100vh + 350px); /* Adjust to avoid exceeding viewport height */
+
+
+    
+ 
+ }
+
+ main h1{
+    font-size: clamp(15px, 3vw, 28px);
+    position: relative;
+    left: calc((10px - 100vh)* 0.1);
+    top: 20px;
+ }
+
+ .wrapper{
+    
+    align-items: center;
+    text-align: center;
+ }
+ .wrapper p{
+    width: 58ch;
+ }
+
+ #img_EL{
+    margin-bottom: 20px;
+ }
