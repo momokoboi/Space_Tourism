@@ -109,6 +109,10 @@ input[type="checkbox"]:checked ~ ul{
     display: none;
 }
 
+header > hr{
+    display: none;
+}
+
 main{
     min-height: 100vh;
 }
@@ -116,12 +120,17 @@ main h1{
     display: block;
     color: red;
     font-size: clamp(20px,3vw, 28px);
-    margin-left: calc((855px - 100vh)* 1.2);
+    margin-left: calc((855px - 100vh)* 1);
 }
 
 article{
     justify-content: center;
     align-items: center;
+}
+
+.wrapper{
+    align-items: center;
+    text-align: center;
 }
 
 .wrapper h3{
@@ -137,6 +146,6 @@ article{
 
 .wrapper_img img{
     display: block;
-    margin: 16px 60px;
+    margin: 17px 60px;
     width: 300px;
 }
