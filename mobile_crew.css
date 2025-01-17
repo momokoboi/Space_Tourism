@@ -118,9 +118,8 @@ main{
 }
 main h1{
     display: block;
-    color: red;
     font-size: clamp(20px,3vw, 28px);
-    margin-left: calc((855px - 100vh)* 3.5);
+    margin-left: calc((855px - 100vh)* 4.2);
 }
 
 article{
