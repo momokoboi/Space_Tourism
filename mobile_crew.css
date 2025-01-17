@@ -115,7 +115,7 @@ main{
 main h1{
     display: block;
     font-size: clamp(20px,3vw, 28px);
-    margin-left: calc((855px - 100vh)* 4.2);
+    margin-left: calc((855px - 100vh)* 6.2);
 }
 
 article{
