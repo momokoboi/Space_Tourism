@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // fetch Data for all
 async function getdata(){
     // /Space_Tourism (for github)
-    return await fetch("/Space_Tourism/data.json")
+    return await fetch("/data.json")
     .then(res => res.json())
     .catch(error => console.log(error))
     
@@ -316,7 +316,7 @@ async function main_Technology() {
             title_EL.innerText = `${data.technology[0].name}`
             const viewportWidth = window.innerWidth;
             description_EL.innerText = `${data.technology[0].description}`
-            if(viewportWidth > 1400){
+            if(viewportWidth > 1200){
                 img_EL.setAttribute("src", `${data.technology[0].images.portrait}`)
             }
             // tablet
@@ -331,7 +331,7 @@ async function main_Technology() {
             title_EL.innerText = `${data.technology[1].name}`
             description_EL.innerText = `${data.technology[1].description}`
             const viewportWidth = window.innerWidth;
-            if(viewportWidth > 1400){
+            if(viewportWidth > 1200){
                 img_EL.setAttribute("src", `${data.technology[1].images.portrait}`)
             }
             if(viewportWidth < 1200){
@@ -345,7 +345,7 @@ async function main_Technology() {
             title_EL.innerText = `${data.technology[2].name}`
             description_EL.innerText = `${data.technology[2].description}`
             const viewportWidth = window.innerWidth;
-            if(viewportWidth > 1400){
+            if(viewportWidth > 1200){
                 img_EL.setAttribute("src", `${data.technology[2].images.portrait}`)
             }
             if(viewportWidth < 1200){
