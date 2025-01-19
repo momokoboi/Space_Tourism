@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // fetch Data for all
 async function getdata(){
     // /Space_Tourism (for github)
-    return await fetch("/data.json")
+    return await fetch("/Space_Tourism/data.json")
     .then(res => res.json())
     .catch(error => console.log(error))
     
