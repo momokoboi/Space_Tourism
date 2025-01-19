@@ -314,8 +314,15 @@ async function main_Technology() {
     radio1.addEventListener("change", () => {
         if(radio1.checked){
             title_EL.innerText = `${data.technology[0].name}`
+            const viewportWidth = window.innerWidth;
             description_EL.innerText = `${data.technology[0].description}`
-            img_EL.setAttribute("src", `${data.technology[0].images.portrait}`)
+            if(viewportWidth > 1400){
+                img_EL.setAttribute("src", `${data.technology[0].images.portrait}`)
+            }
+            // tablet
+            if(viewportWidth < 1200){
+                img_EL.setAttribute("src", `${data.technology[0].images.landscape}`)
+            }
         }
     })
 
@@ -323,7 +330,13 @@ async function main_Technology() {
         if(radio2.checked){
             title_EL.innerText = `${data.technology[1].name}`
             description_EL.innerText = `${data.technology[1].description}`
-            img_EL.setAttribute("src", `${data.technology[1].images.portrait}`)
+            const viewportWidth = window.innerWidth;
+            if(viewportWidth > 1400){
+                img_EL.setAttribute("src", `${data.technology[1].images.portrait}`)
+            }
+            if(viewportWidth < 1200){
+                img_EL.setAttribute("src", `${data.technology[1].images.landscape}`)
+            }
         }
     })
 
@@ -331,7 +344,13 @@ async function main_Technology() {
         if(radio3.checked){
             title_EL.innerText = `${data.technology[2].name}`
             description_EL.innerText = `${data.technology[2].description}`
-            img_EL.setAttribute("src", `${data.technology[2].images.portrait}`)
+            const viewportWidth = window.innerWidth;
+            if(viewportWidth > 1400){
+                img_EL.setAttribute("src", `${data.technology[2].images.portrait}`)
+            }
+            if(viewportWidth < 1200){
+                img_EL.setAttribute("src", `${data.technology[2].images.landscape}`)
+            }
         }
     })
 

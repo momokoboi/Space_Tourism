@@ -1,0 +1,47 @@
+header hr{ 
+    display: none;
+}
+body,html{
+    overflow-y: auto;
+    overflow-x: auto;
+    min-height: 100vh;
+}
+main{
+    min-height: 100vh;
+    margin-top: 220px;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+h3{
+    position: absolute;
+    top: -170px;
+    left: 90px;
+}
+
+main img{
+    src: url(assets/technology/image-launch-vehicle-landscape.jpg);
+    
+    aspect-ratio: 2 / 1;
+    width: 800px;
+    margin: 0px;
+
+}
+
+#content_main{
+    margin-left: 0px;
+    padding-bottom: 100px;
+}
+
+#all_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+}

@@ -1,0 +1,177 @@
+
+
+header hr{
+    display: none;
+}
+
+body, html{
+    position: relative;
+ 
+    min-height: 100vh;
+    overflow-y: auto;
+    background-image: url(assets/technology/background-technology-mobile.jpg);
+}
+
+
+
+/* all */
+header nav{
+    height: 100vh;
+    position: absolute;
+    width: fit-content;
+
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* display: none; */
+  
+}
+
+header > nav > ul{
+    margin-top: 130px;
+    flex-flow: column nowrap;
+    width: 40vw;
+    justify-content: flex-start;
+    flex: none;
+    height: fit-content;
+    gap: 32px;
+    position: relative;
+}
+
+nav a{
+    height: fit-content;
+    font-size: clamp(12px, 2vw, 16px);
+    font-family: var(--Barlow_condensed);
+    line-height: 19.2%;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+nav a:not(.selected):hover::before{
+    content: "";
+    width: 6px;
+    background-color: rgba(255, 255, 255, 0.405);
+
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+    transform: translate(-50%, -50%);
+}
+
+
+
+.selected::before{
+    content: "";
+    width: 6px;
+    background-color: white;
+    height: 100%;
+    top: 50%;
+    left: calc(100% - 15px);
+
+    position: absolute;
+}
+
+nav li{
+    margin-left: 15px;
+    width: 100%;
+    height: fit-content;
+}
+
+/* hamburger menu */
+#label_open_close::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    top: 80px;
+    right: 50px;
+    background-image: url(assets/shared/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+/* hamburger responsiveness */
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + #label_open_close::before{
+    background-image: url(assets/shared/icon-hamburger.svg);
+
+}
+input[type="checkbox"]:checked ~ ul{
+    display: none;
+}
+
+/* main */
+
+main{
+    min-height: 100vh;
+    margin-top: 220px;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h3{
+    position: absolute;
+    top: 170px;
+    margin-left: calc((850px - 100vw)*0.1);
+    font-size: clamp(18px, 5vw,28px);
+}
+
+main img{
+    src: url(assets/technology/image-launch-vehicle-landscape.jpg);
+    
+    aspect-ratio: 2 / 1;
+    width: 100vw;
+    margin: 0px;
+
+}
+
+#content_main{
+    margin-left: 0px;
+    padding-bottom: 100px;
+}
+
+#all_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+article{
+    align-items: center;
+
+}
+
+h2{
+    font-size: clamp(20px, 4vw, 32px);
+}
+
+h1{
+    font-size: clamp(33px,10vw,56px);
+
+}
+
+p{
+    width: 40ch;
+    font-size: clamp(13px, 4vw, 18px);
+
+}
+
+.label_btn{
+    width: clamp(50px, 10vw,80px);
+}
